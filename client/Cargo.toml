@@ -1,0 +1,10 @@
+[package]
+name = "bevy-networking-client"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+bevy = "0.13"
+crossbeam = "0.8"
+anyhow = "1.0"
+clap = { version = "4.5.56", features = ["derive"] }

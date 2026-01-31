@@ -1,0 +1,15 @@
+[workspace]
+members = ["server", "client", "knock_knock"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+# Optimization: This reduces the binary size significantly (fixes "why is it so heavy?")
+# Use: cargo run --release
+[profile.release]
+opt-level = "z"   # Optimize for size
+lto = true        # Enable Link Time Optimization
+codegen-units = 1 # Maximize optimization at cost of compile time
+strip = true      # Strip symbols

@@ -1,0 +1,16 @@
+[package]
+name = "knock_knock"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "knock_server"
+path = "src/server.rs"
+
+[[bin]]
+name = "knock_client"
+path = "src/client.rs"
+
+[dependencies]
+bevy = "0.13"
+clap = { version = "4", features = ["derive"] }
